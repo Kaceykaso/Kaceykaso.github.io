@@ -11,8 +11,8 @@
  * Look
  */
  .navbar-inverse {
- 	background-color: rgba(256,256,256,0.5);
- 	border-color: rgba(256,256,256,0.5);
+ 	background-color: rgba(0,0,0,0.5);
+ 	border-color: rgba(0,0,0,0.5);
  }
 .logo {
 	border: 10px #fff solid;
