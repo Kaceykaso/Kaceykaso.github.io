@@ -8,27 +8,10 @@ body {
   font-family: 1.33333333vmin 'Lato', sans-serif;
   box-sizing: border-box;
 }
-/*header {
-  background: rgba(0,0,0,0.6);
-  height: @headerHeight;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  -webkit-animation: headerIn 3s;
-  -moz-animation: headerIn 3s;
-  -o-animation: headerIn 3s;
-  animation: headerIn 3s;
-}
-nav {
-  float: right;
-  height: @headerHeight;
-}*/
 header {
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000;
   height: 8vh;
-  line-height: 2.5;
+  line-height: 1.5;
   padding: 0 4vh 0;
   width: 100%;
 }
@@ -50,7 +33,7 @@ dropdown ul li {
   padding: 15px 20px;
 }
 dropdown ul li {
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000;
   color: #fff;
 }
 dropdown label {
@@ -62,7 +45,7 @@ dropdown label i:before {
   -webkit-transition: 1s linear;
 }
 dropdown ul {
-  margin: 20px 0 0 -40px;
+  margin: 8vh 0 0 -8vh;
 }
 dropdown ul li:hover {
   background: #1abc9c;
@@ -120,8 +103,7 @@ footer {
   width: 40vh;
 }
 .fa {
-  font-size: 1em;
-  line-height: 22px !important;
+  font-size: 4vmin;
 }
 .main {
   background: url('http://i.imgur.com/QQpWL23.jpg') center center no-repeat scroll;
@@ -158,7 +140,7 @@ footer {
 .cube span:nth-of-type(2) {
   color: transparent;
   font-size: 2.66666667vmin;
-  margin-left: -1.33333333vmin;
+  margin-left: -0.25em;
   transition: 1s linear;
   -webkit-transition: 1s linear;
 }
@@ -204,13 +186,30 @@ footer {
   border-left: 15vw solid transparent;
   border-top: 15vw solid rgba(0, 0, 0, 0.5);
 }
+/*.footer-content div {
+	display: inline;
+	& .fltrt a {
+		float: left;
+		margin-top: 10vh;
+		padding-left: @headerHeight/2;
+	}
+}*/
+.footer-content {
+  clear: both;
+}
 .footer-content div {
   display: inline;
+  font-size: 2vmin;
 }
-.footer-content div .fa {
+.footer-content div.fltrt a {
   float: left;
-  margin-top: 10vh;
-  padding-left: 5vh;
+  font-size: 4vmin;
+  line-height: 25vh;
+  margin-right: 4vmin;
+  padding-left: 1.66666667vh;
+}
+.footer-content div.fltrt a:hover {
+  color: #999;
 }
 /* Positioning */
 .center {

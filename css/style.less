@@ -4,39 +4,18 @@
 @lineHeight: 3vh;
 @fontSize: 4vmin;
 @turquoise: #1ABC9C;
-@translucentBlack: rgba(0,0,0,0.5);
+@translucentBlack: rgba(0,0,0,1);
 
 /* Foundation */
 body {
   background: #3c455e; 
   color: #fff;
-  height: 100%;
-  padding: 0;
-  margin: 0;
   font-family: @fontSize/@lineHeight 'Lato', sans-serif;
-  box-sizing: border-box;
 }
-/*header {
-  background: rgba(0,0,0,0.6);
-  height: @headerHeight;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  -webkit-animation: headerIn 3s;
-  -moz-animation: headerIn 3s;
-  -o-animation: headerIn 3s;
-  animation: headerIn 3s;
-}
-nav {
-  float: right;
-  height: @headerHeight;
-}*/
 header {
   background: @translucentBlack;
   height: 8vh;
-  line-height: 2.5;
+  line-height: 1.5;
   padding: 0 4vh 0;
   width: 100%;
 }
@@ -47,7 +26,7 @@ a {
 		text-decoration: underline;
 	}
 }
-dropdown{
+dropdown {
   display: inline-block;
   margin: -8.5vh 4vh;
 }
@@ -69,7 +48,7 @@ dropdown label i:before {
   -webkit-transition: 1s linear;
 }
 dropdown ul {
-  margin: 20px 0 0 -40px;
+  margin: 8vh 0 0 -8vh;
 }
 dropdown ul li:hover{
   background: @turquoise;
@@ -128,9 +107,8 @@ footer {
   padding: @headerHeight/15;
   width: @headerHeight*4;
 }
-.fa{
-  font-size: 1em;
-  line-height: 22px !important;
+.fa {
+  font-size: @fontSize
 }
 .main {
 	background: url('http://i.imgur.com/QQpWL23.jpg') center center no-repeat scroll;
@@ -166,7 +144,7 @@ footer {
   & span:nth-of-type(2) {
     color: transparent;
     font-size: @fontSize/1.5;
-    margin-left: -@fontSize/@lineHeight;
+    margin-left: -0.25em;
     transition: 1s linear;
     -webkit-transition: 1s linear;
   }
@@ -213,13 +191,30 @@ footer {
     }
   }
 }
-.footer-content div {
+/*.footer-content div {
 	display: inline;
-	& .fa {
+	& .fltrt a {
 		float: left;
 		margin-top: 10vh;
 		padding-left: @headerHeight/2;
 	}
+}*/
+.footer-content {
+  clear: both;
+  & div {
+	display: inline;
+	font-size: @fontSize/2;
+    &.fltrt a {
+      float: left;
+      font-size: @fontSize;
+      line-height: @headerHeight*2.5;
+      margin-right: @fontSize;
+      padding-left: @headerHeight/6;
+      &:hover {
+        color: #999;
+      }
+    }
+  }
 }
 /* Positioning */
 .center {
