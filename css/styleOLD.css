@@ -1,26 +1,47 @@
 /* Foundation */
 body {
   background: #3c455e;
-  font: 3vmin/3vh Arial, Helvetica, san-serif;
   color: #fff;
+  font-family: 1.33333333vmin 'Lato', sans-serif;
 }
 header {
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000;
   height: 8vh;
-  line-height: 2.5;
+  line-height: 1.5;
   padding: 0 4vh 0;
   width: 100%;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 dropdown {
   display: inline-block;
   margin: -8.5vh 4vh;
 }
-dropdown ul {
-  margin: 20px 0 0 -40px;
+dropdown label,
+dropdown ul li {
+  display: block;
+  width: 200px;
+  padding: 15px 20px;
 }
 dropdown ul li {
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000;
   color: #fff;
+}
+dropdown label {
+  width: 200px;
+  -webkit-transition: 0.5s linear;
+}
+dropdown label i:before {
+  content: "";
+  -webkit-transition: 1s linear;
+}
+dropdown ul {
+  margin: 8vh 0 0 -8vh;
 }
 dropdown ul li:hover {
   background: #1abc9c;
@@ -30,13 +51,7 @@ dropdown ul li:hover {
 dropdown label {
   color: #1abc9c;
   position: relative;
-  z-index: 2;
-  width: 200px;
-  -webkit-transition: 0.5s linear;
-}
-dropdown label i:before {
-  content: "";
-  -webkit-transition: 1s linear;
+  z-index: 104;
 }
 dropdown label:hover {
   color: white;
@@ -53,7 +68,7 @@ dropdown input ~ ul {
   visibility: hidden;
   opacity: 0;
   top: -20px;
-  z-index: 1;
+  z-index: 103;
 }
 dropdown input:checked + label {
   color: white;
@@ -66,16 +81,6 @@ dropdown input:checked ~ ul {
   opacity: 1;
   top: 0;
 }
-dropdown label,
-dropdown ul li {
-  display: block;
-  width: 200px;
-  padding: 15px 20px;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
 footer {
   bottom: 0;
   height: 20vh;
@@ -84,23 +89,23 @@ footer {
   padding: 0 2vmin 0 2vmin;
   position: fixed;
   width: 100%;
-  z-index: -100;
-}
-footer a:hover {
-  color: #999;
+  z-index: 1;
 }
 /* Structure */
 .brand {
   float: left;
-  font-size: 3vmin;
+  font-size: 4vmin;
   padding: 0.66666667vh;
   width: 40vh;
+}
+.fa {
+  font-size: 4vmin;
 }
 .main {
   background: url('http://i.imgur.com/QQpWL23.jpg') center center no-repeat scroll;
   margin-bottom: 15vh;
-  overflow-x: hidden;
   width: 100%;
+  z-index: 100;
 }
 .banner {
   display: block;
@@ -108,35 +113,35 @@ footer a:hover {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  z-index: 0;
 }
 .row {
   clear: both;
   display: block;
   overflow-y: hidden;
+  -webkit-animation: slide 3s;
+  -moz-animation: slide 3s;
+  -o-animation: slide 3s;
   animation: slide 3s;
 }
 .cube {
+  background: rgba(255, 255, 255, 0.5);
   float: left;
   height: 15vw;
-  perspective: 1000;
   width: 15vw;
 }
 .cube > span {
   line-height: 22.5vw;
-  margin-left: 2vmin;
+  margin-left: 2.66666667vmin;
 }
 .cube span:nth-of-type(2) {
   color: transparent;
-  font-size: 2vmin;
-  margin-left: -1vmin;
+  font-size: 2.66666667vmin;
+  margin-left: -0.25em;
   transition: 1s linear;
+  -webkit-transition: 1s linear;
 }
 .cube:hover span:nth-of-type(2) {
   color: #fff;
-}
-.cube:hover .flipper {
-  transform: rotateY(180deg);
 }
 .cube.empty {
   background: transparent;
@@ -177,21 +182,29 @@ footer a:hover {
   border-left: 15vw solid transparent;
   border-top: 15vw solid rgba(0, 0, 0, 0.5);
 }
+/*.footer-content div {
+	display: inline;
+	& .fltrt a {
+		float: left;
+		margin-top: 10vh;
+		padding-left: @headerHeight/2;
+	}
+}*/
 .footer-content {
   clear: both;
 }
 .footer-content div {
   display: inline;
-  font-size: 1.5vmin;
+  font-size: 2vmin;
 }
-.footer-content div i {
+.footer-content div.fltrt a {
   float: left;
-  font-size: 3vmin;
+  font-size: 4vmin;
   line-height: 25vh;
-  margin-right: 3vmin;
+  margin-right: 4vmin;
   padding-left: 1.66666667vh;
 }
-.footer-content div i:hover {
+.footer-content div.fltrt a:hover {
   color: #999;
 }
 /* Positioning */
@@ -223,13 +236,19 @@ footer a:hover {
 .purple {
   background: rgba(170, 155, 202, 0.5);
 }
-.white {
-  background: rgba(255, 255, 255, 0.5);
-}
 /* Animations */
 .animate {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
   transition: all .3s;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  /* Chrome and Safari */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
 }
 @-webkit-keyframes slide {
   from {

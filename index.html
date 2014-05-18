@@ -1,37 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This is an amazing website, made with love, by an amazing WOMAN. Her rise to power has been foretold, and recorded by the greatest scribes and scholars of our time. She will gain command over the interwebz piece by piece; but low, she will be a caring and benevolent leader; a loving caretaker of series of tubes. All memes shall be treated equally, given the requisite respect and LOLz they are deserved. All cats shall receive the appropriate amount of AWWWs, no more and no less. In this glorious age of understanding, there will much wow, very connected, such community, and so internets. The troll will have had its time, and its time will be no more. The time for connected alternate digital augmented virtual haptic stimulation and continuous refreshing feedback user experience will be at hand. All hail the cheapest unicorn!">
-    <meta name="author" content="kaceycoughlin@mac.com">
-    <link rel="shortcut icon" href="ico/favicon.ico">
+<html>
 
-    <title>Design for the User</title>
+<head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <meta charset="UTF-8">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <title>Moooooore experiments... - CodePen</title>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <style>
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
-    <!-- Custom styles for this template -->
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
+</style>
+
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+
+    <style>
+/* Foundation */
+body {
+  background: #3c455e;
+  font: 3vmin/3vh Arial, Helvetica, san-serif;
+  color: #fff;
+}
+header {
+  background: rgba(0, 0, 0, 0.5);
+  height: 8vh;
+  line-height: 2.5;
+  padding: 0 4vh 0;
+  width: 100%;
+}
+dropdown {
+  display: inline-block;
+  margin: -8.5vh 4vh;
+}
+dropdown ul {
+  margin: 20px 0 0 -40px;
+}
+dropdown ul li {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+dropdown ul li:hover {
+  background: #1abc9c;
+  color: white;
+  cursor: pointer;
+}
+dropdown label {
+  color: #1abc9c;
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  -webkit-transition: 0.5s linear;
+}
+dropdown label i:before {
+  content: "";
+  -webkit-transition: 1s linear;
+}
+dropdown label:hover {
+  color: white;
+  cursor: pointer;
+}
+dropdown label:hover i:before {
+  content: "Menu";
+}
+dropdown input {
+  display: none;
+}
+dropdown input ~ ul {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  top: -20px;
+  z-index: 1;
+}
+dropdown input:checked + label {
+  color: white;
+}
+dropdown input:checked + label i:before {
+  content: "Menu";
+}
+dropdown input:checked ~ ul {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+dropdown label,
+dropdown ul li {
+  display: block;
+  width: 200px;
+  padding: 15px 20px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+footer {
+  bottom: 0;
+  height: 20vh;
+  left: 0;
+  line-height: 25vh;
+  padding: 0 2vmin 0 2vmin;
+  position: fixed;
+  width: 100%;
+  z-index: -100;
+}
+footer a:hover {
+  color: #999;
+}
+/* Structure */
+.brand {
+  float: left;
+  font-size: 3vmin;
+  padding: 0.66666667vh;
+  width: 40vh;
+}
+.main {
+  background: url('http://i.imgur.com/QQpWL23.jpg') center center no-repeat scroll;
+  margin-bottom: 15vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+.banner {
+  display: block;
+  height: 70vw;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+.row {
+  clear: both;
+  display: block;
+  overflow-y: hidden;
+  animation: slide 3s;
+}
+.cube {
+  float: left;
+  height: 15vw;
+  perspective: 1000;
+  width: 15vw;
+}
+.cube > span {
+  line-height: 22.5vw;
+  margin-left: 2vmin;
+}
+.cube span:nth-of-type(2) {
+  color: transparent;
+  font-size: 2vmin;
+  margin-left: -1vmin;
+  transition: 1s linear;
+}
+.cube:hover span:nth-of-type(2) {
+  color: #fff;
+}
+.cube:hover .flipper {
+  transform: rotateY(180deg);
+}
+.cube.empty {
+  background: transparent;
+  border: none;
+}
+.cube.empty > span {
+  font-size: 2vh;
+  line-height: 3vh;
+  margin: 0;
+}
+.cube.triangle-left {
+  height: 0;
+  padding-bottom: 15vw;
+  overflow: hidden;
+}
+.cube.triangle-left:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 15vw solid transparent;
+  border-bottom: 15vw solid rgba(0, 0, 0, 0.5);
+}
+.cube.triangle-right {
+  width: 0;
+  height: 0;
+  padding-left: 15vw;
+  padding-top: 15vw;
+  overflow: hidden;
+}
+.cube.triangle-right:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -15vw;
+  margin-top: -15vw;
+  border-left: 15vw solid transparent;
+  border-top: 15vw solid rgba(0, 0, 0, 0.5);
+}
+.footer-content {
+  clear: both;
+}
+.footer-content div {
+  display: inline;
+  font-size: 1.5vmin;
+}
+.footer-content div i {
+  float: left;
+  font-size: 3vmin;
+  line-height: 25vh;
+  margin-right: 3vmin;
+  padding-left: 1.66666667vh;
+}
+.footer-content div i:hover {
+  color: #999;
+}
+/* Positioning */
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+}
+.fltrt {
+  float: right;
+}
+.fltlft {
+  float: left;
+}
+/* Variations */
+.pink {
+  background: rgba(247, 130, 138, 0.5);
+}
+.turquoise {
+  background: rgba(55, 184, 135, 0.5);
+}
+.gold {
+  background: rgba(245, 207, 119, 0.5);
+}
+.purple {
+  background: rgba(170, 155, 202, 0.5);
+}
+.white {
+  background: rgba(255, 255, 255, 0.5);
+}
+/* Animations */
+.animate {
+  transition: all .3s;
+  backface-visibility: hidden;
+}
+@-webkit-keyframes slide {
+  from {
+    margin-top: -15vw;
+    margin-left: -30vw;
+    margin-right: -30vw;
+  }
+  to {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@-moz-keyframes slide {
+  from {
+    margin-top: -15vw;
+    margin-left: -30vw;
+    margin-right: -30vw;
+  }
+  to {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@-o-keyframes slide {
+  from {
+    margin-top: -15vw;
+    margin-left: -30vw;
+    margin-right: -30vw;
+  }
+  to {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@keyframes slide {
+  from {
+    margin-top: -15vw;
+    margin-left: -30vw;
+    margin-right: -30vw;
+  }
+  to {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
 <body>
-<div class="main">
-  <header>
-    <div class="brand">
-        Kacey Coughlin
+
+  <div class="main">
+<header>
+      <div class="brand">
     </div>
   </header>
   <dropdown class="fltrt">
@@ -40,55 +316,76 @@
       <i class="fa fa-bars fltrt"></i>
     </label>
     <ul class="animate">
-      <a href="http://kaceycoughlin.com"><li class="animate">Print<i class="fa fa-book fltrt"></i></li></a>
-      <li class="animate"><a href="#">Web<i class="fa fa-laptop fltrt"></i></a></li>
-      <li class="animate"><a href="#">Misc<i class="fa fa-code fltrt"></i></a></li>
-      <li class="animate"><a href="#">Archive<i class="fa fa-save fltrt"></i></a></li>
-      <li class="animate"><a href="#">About<i class="fa fa-user fltrt"></i></a></li>
+      <a href="#">
+        <li class="animate">Print<i class="fa fa-book fltrt"></i></li>
+      </a>
+      <a href="#">
+        <li class="animate">Web<i class="fa fa-laptop fltrt"></i></li>
+      </a>
+      <a href="#">
+        <li class="animate">Misc<i class="fa fa-code fltrt"></i></li>
+      </a>
+      <a href="#">
+        <li class="animate">Archive<i class="fa fa-save fltrt"></i></li>
+      </a>
+      <a href="#">
+        <li class="animate">About<i class="fa fa-user fltrt"></i></li>
+      </a>
     </ul>
   </dropdown>
-
-	<div class="banner">
-	  <div class="center">
-	    <div class="row slideUp">
-	      <div class="cube pink">
-	        <span>A</span>
-	        <span>bout</span>
-	      </div>
-	      <div class="cube empty triangle-left"></div>
-	      <div class="cube empty">
-	      </div>
-	    </div>
-	    <div class="row">
-	      <div class="cube">
-	        <span>D</span>
-	        <span>esign</span>
-	      </div>
-	      <div class="cube turquoise">
-	        <span>P</span>
-	        <span>rint</span>
-	      </div>
-	      <div class="cube purple">
-	        <span>W</span>
-	        <span>eb</span>
-	      </div>
-	    </div>
-	    <div class="row fltrt">
-	      <div class="cube empty"></div>
-	      <div class="cube empty triangle-right"></div>
-	      <div class="cube gold">
-	        <span>M</span>
-	        <span>isc</span>
-	      </div>
-	    </div>
-	  </div><!-- end .center -->
-	</div><!-- end .banner -->
+<div class="banner">
+  <div class="center">
+    <div class="row slideUp">
+      <a href="#">
+        <div class="cube pink">
+            <span>A</span>
+            <span>bout</span>
+        </div><!-- end .cude -->
+      </a>
+      <div class="cube empty triangle-left"></div>
+      <div class="cube empty">
+      </div>
+    </div>
+    <div class="row">
+      <a href="#">
+        <div class="cube white">
+            <span>D</span>
+            <span>esign</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="cube turquoise">
+          <span>P</span>
+          <span>rint</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="cube purple">
+          <span>W</span>
+          <span>eb</span>
+        </div>
+      </a>
+    </div>
+    <div class="row fltrt">
+      <div class="cube empty">
+      </div>
+      <div class="cube empty triangle-right"></div>
+      <a href="#">
+        <div class="cube gold">
+          <span>M</span>
+          <span>isc</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 </div><!-- end .main -->
 
 <footer>
 	<div class="footer-content">
 		<div class="fltlft">
-			&copy; 2014 <a href="http://www.kaceycoughlin.com" title="Kacey Coughlin">Kacey Coughlin</a>
+			&copy; 2014 <a href="http://www.kaceycoughlin.com" title="Kacey Coughlin">Kacey Coughlin</a> | 
+      <a href="#">Sitemap</a>
 		</div>
 		<div class="fltrt">
 			<a href="https://www.facebook.com/Kaceykaso" title="Facebook"><i class="fa fa-facebook-square"></i></a>
@@ -101,14 +398,6 @@
 	</div>
 </footer>
 
+</body>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/docs.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    
-  </body>
 </html>
-
