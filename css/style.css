@@ -1,6 +1,6 @@
 /* Foundation */
 body {
-  background: #3c455e;
+  background: #181951;
   font: 3vmin/3vh Arial, Helvetica, san-serif;
   color: #fff;
 }
@@ -76,6 +76,13 @@ a {
   color: #fff;
   text-decoration: none;
 }
+h1, h2 {
+	padding: 0.5em 10vmin 0.5em;
+}
+h3 {
+	padding: 0;
+	display: inline;
+}
 footer {
   bottom: 0;
   height: 20vh;
@@ -96,9 +103,10 @@ footer a:hover {
   padding: 0.66666667vh;
   width: 40vh;
 }
-.main {
-  background: url('http://i.imgur.com/QQpWL23.jpg') center center no-repeat scroll;
-  margin-bottom: 15vh;
+.main, .main2 {
+  background: url('http://i.imgur.com/QQpWL23.jpg') #070222 top center no-repeat scroll;
+  height: 100%;
+  margin-bottom: 10vh;
   overflow-x: hidden;
   width: 100%;
 }
@@ -176,6 +184,39 @@ footer a:hover {
   margin-top: -15vw;
   border-left: 15vw solid transparent;
   border-top: 15vw solid rgba(0, 0, 0, 0.5);
+}
+.content {
+	margin-bottom: 4vh;
+	z-index: 5;
+}
+.content h2, .content h3, .content i {
+	background: -webkit-linear-gradient(#939393 0%, #5d5d5d 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 1px -1px 5px rgba(63,63,63,0.51);
+}
+.content .row {
+	clear: both;
+}
+.content div {
+	display: inline;
+	padding: 1em 0 1em;
+}
+.content .fltlft { padding-left: 10%;}
+.content .fltrt { padding-right: 10%;}
+.content div.blurb {
+	width: 65%;
+}
+.content p {
+	color: #ffffff;
+	display: inline;
+	font-size: 2.5vmin;
+	font-weight: normal;
+	text-shadow: 1px 1px 0px rgba(187,187,187,1);
+}
+.content div i {
+	font-size: 10vmin;
+	margin: 0 5% 0;
 }
 .footer-content {
   clear: both;
