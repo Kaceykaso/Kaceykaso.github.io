@@ -76,9 +76,6 @@ a {
   color: #fff;
   text-decoration: none;
 }
-h1, h2 {
-	padding: 0.5em 10vmin 0.5em;
-}
 h3 {
 	padding: 0;
 	display: inline;
@@ -189,7 +186,7 @@ footer a:hover {
 	margin-bottom: 4vh;
 	z-index: 5;
 }
-.content h2, .content h3, .content i {
+.content h2, .content i {
 	background: -webkit-linear-gradient(#939393 0%, #5d5d5d 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -207,16 +204,15 @@ footer a:hover {
 .content div.blurb {
 	width: 65%;
 }
-.content p {
-	color: #ffffff;
-	display: inline;
-	font-size: 2.5vmin;
-	font-weight: normal;
-	text-shadow: 1px 1px 0px rgba(187,187,187,1);
-}
 .content div i {
 	font-size: 10vmin;
 	margin: 0 5% 0;
+}
+.about {
+	background: rgba(255,255,255,0.5);
+	color: #666;
+	margin: 5%;
+	padding: 2%;
 }
 .footer-content {
   clear: both;
