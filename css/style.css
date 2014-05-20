@@ -208,11 +208,21 @@ footer a:hover {
 	font-size: 10vmin;
 	margin: 0 5% 0;
 }
-.about {
+.about, .sitemap {
 	background: rgba(255,255,255,0.5);
 	color: #666;
+	line-height: 1.5;
 	margin: 5%;
 	padding: 2%;
+}
+.about img {
+	padding: 1em;
+}
+.sitemap ul {
+	list-style: none;
+}
+.sitemap ul li {
+	margin-bottom: 1em;
 }
 .footer-content {
   clear: both;
