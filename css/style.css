@@ -224,7 +224,7 @@ footer a:hover {
 .sitemap a {
 	color: #666;
 }
-.sitemap a:hover {
+.about a:hover, .sitemap a:hover {
 	text-decoration: underline;
 }
 .sitemap ul {
