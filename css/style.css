@@ -80,6 +80,19 @@ h3 {
 	padding: 0;
 	display: inline;
 }
+input[type=text], input[type=email], textarea, input[type=submit] {
+	padding: 0.5em;
+	border: none;
+	border-radius: 3px;
+	display: block;
+	width: 40vmin;
+	margin-bottom: 0.5em;
+}
+input[type=submit] {
+	background: -webkit-linear-gradient(#18ecfb 0%, #0a7678 100%);
+	color: #fff;
+	width: 43vmin;
+}
 footer {
   bottom: 0;
   height: 20vh;
@@ -215,6 +228,22 @@ footer a:hover {
 	margin: 5%;
 	padding: 2%;
 }
+.masonry {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.masonry > a img, .masonry .codepen {
+  padding: 0.5em;
+  width:  20%;
+  float: left;
+}
+.masonry .codepen {
+	width: 50%;
+}
+.masonry-title {
+	margin-left: 5%;
+}
 .about img {
 	padding: 1em;
 }
@@ -227,6 +256,7 @@ footer a:hover {
 .about a:hover, .sitemap a:hover {
 	text-decoration: underline;
 }
+
 .sitemap ul {
 	float: left;
 	list-style: none;
