@@ -228,6 +228,10 @@ footer a:hover {
 	margin: 5%;
 	padding: 2%;
 }
+.contact {
+	float: left;
+	width: 40%;
+}
 .masonry {
   max-width: 80%;
   margin: 0 auto;
