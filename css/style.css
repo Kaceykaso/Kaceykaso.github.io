@@ -1,6 +1,6 @@
 /* Foundation */
 body {
-  background: #181951;
+  background: #1e1f38;
   font: 3vmin/3vh Arial, Helvetica, san-serif;
   color: #fff;
 }
@@ -28,7 +28,7 @@ dropdown ul li:hover {
   cursor: pointer;
 }
 dropdown label {
-  color: #1abc9c;
+  color: #1bbd9d;
   position: relative;
   z-index: 2;
   width: 200px;
@@ -104,7 +104,7 @@ footer {
   z-index: -100;
 }
 footer a:hover {
-  color: #999;
+  color: #1bbd9d;
 }
 /* Structure */
 .brand {
@@ -114,7 +114,8 @@ footer a:hover {
   width: 40vh;
 }
 .main, .main2 {
-  background: url('http://i.imgur.com/QQpWL23.jpg') #070222 top center no-repeat scroll;
+  /*background: url('http://i.imgur.com/QQpWL23.jpg') #070222 top center no-repeat scroll;*/
+  background: url('../img/sky.png') #000 top center no-repeat scroll;
   height: 100%;
   margin-bottom: 10vh;
   overflow-x: hidden;
@@ -200,9 +201,7 @@ footer a:hover {
 	z-index: 5;
 }
 .content h2, .content i {
-	background: -webkit-linear-gradient(#939393 0%, #5d5d5d 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #1bbd9d;
 	text-shadow: 1px -1px 5px rgba(63,63,63,0.51);
 }
 .content .row {
@@ -222,14 +221,26 @@ footer a:hover {
 	margin: 0 5% 0;
 }
 .about, .sitemap {
-	background: rgba(255,255,255,0.5);
-	color: #666;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
 	line-height: 1.5;
 	margin: 5%;
 	padding: 2%;
 }
+.about a, .sitemap a {
+	border-bottom: 1px dotted rgba(255,255,255,0.6);
+}
+.about a:hover, .sitemap a:hover {
+	border-bottom: 1px solid #fff;
+}
+.form {
+	display: inline-block;
+	width: 20vw;
+}
 .contact {
-	float: left;
+	clear: both;
+	float: right;
+	margin-top: -100px;
 	width: 40%;
 }
 .masonry {
@@ -254,13 +265,17 @@ footer a:hover {
 .sitemap {
 	height: 800px;
 }
-.sitemap a {
-	color: #666;
+.explanation {
+	font-size: smaller;
+	margin-bottom: 10vh;
+	padding: 0 10vw 0;
 }
-.about a:hover, .sitemap a:hover {
-	text-decoration: underline;
+.explanation a {
+	border-bottom: 1px dotted rgba(255,255,255,0.6);
 }
-
+.explanation a:hover {
+	border-bottom: 1px solid #fff;
+}
 .sitemap ul {
 	float: left;
 	list-style: none;
@@ -283,7 +298,7 @@ footer a:hover {
   padding-left: 1.66666667vh;
 }
 .footer-content div i:hover {
-  color: #999;
+  color: #1bbd9d;
 }
 /* Positioning */
 .center {
