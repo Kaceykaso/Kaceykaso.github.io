@@ -10,11 +10,10 @@
   <link rel='stylesheet prefetch' href='css/normalize.css'>
   <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="http://www.kaceycoughlin.com/css/magnific.css" rel="stylesheet">
-  <link rel='stylesheet prefetch' href='css/style.css'>
+  <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <link rel="stylesheet prefetch" href="css/style.css">
 
     <script src="js/prefixfree.min.js"></script>
-    <script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
 
 </head>
 
@@ -57,12 +56,20 @@
   </dropdown>
 
 	<div class="content">
-		<h2 class="masonry-title">Print</h2>
-		<div class="masonry js-masonry"  data-masonry-options="{ 'columnWidth': 20 }">
-			<a href="http://www.kaceycoughlin.com/img/print/cses.png"><img src="http://www.kaceycoughlin.com/img/print/cses.png" title="CSES Logo"></a>
-			<a href="http://www.kaceycoughlin.com/img/print/hitch_freight.png"><img src="http://www.kaceycoughlin.com/img/print/hitch_freight.png" title="Hitch Freight Logo"></a>
-			<a href="http://www.kaceycoughlin.com/img/print/wasc_logo.jpg"><img src="http://www.kaceycoughlin.com/img/print/wasc_logo.jpg" title="WASC Logo"></a>
-			<a href="http://www.kaceycoughlin.com/img/print/psemi_kickball_team_logo.jpg"><img src="http://www.kaceycoughlin.com/img/print/psemi_kickball_team_logo.jpg" title="Peregrine Kickball Shirt"></a>
+		<h2 class="title">Print</h2>
+		<div class="content-container">
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/print/cses.png" title="Logo/branding design for <a href='http://cses.ucsd.edu/'>Computer Science & Engineering Society</a> at UCSD.<br><br>Tools: Illustrator"><img src="http://www.kaceycoughlin.com/img/print/cses.png" title="CSES Logo"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/print/hitch_freight.png" title="Logo and sticker design for HitchFreight.com<br><br>Tools: Illustrator"><img src="http://www.kaceycoughlin.com/img/print/hitch_freight.png" title="Hitch Freight Logo"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/print/wasc_logo.jpg" title="Logo/branding design for West American Service Corp.<br><br>Tools: Illustrator"><img src="http://www.kaceycoughlin.com/img/print/wasc_logo.jpg" title="WASC Logo"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/print/psemi_kickball_team_logo.jpg" title="T-shirt design for <a href='http://www.psemi.com/'>Peregrine Semiconductor's</a> Kickball teams, for the 2012 company picnic.<br><br>Tools: Illustrator"><img src="http://www.kaceycoughlin.com/img/print/psemi_kickball_team_logo.jpg" title="Peregrine Kickball Shirt"></a>
+			</div>
 		</div>
 	</div><!-- end .content -->
 	
@@ -86,35 +93,11 @@
 		</div>
 	</div>
 </footer>
-
-<script src="http://www.kaceycoughlin.com/js/magnific.js"></script>
-<script type="text/javascript">
-		// Magnific single
-		$(document).ready(function() {
-	
-			$('.masonry').magnificPopup({
-				type: 'image',
-				closeOnContentClick: true,
-				image: {
-					verticalFit: false
-				}
-			});
-			// Group
-			$('.masonry').magnificPopup({
-				delegate: 'a',
-				type: 'image',
-				tLoading: 'Loading image #%curr%...',
-				mainClass: 'mfp-img-mobile',
-				gallery: {
-					enabled: true,
-					navigateByImgClick: true,
-					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-				}
-			});
-		
-		});
-    
-</script>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/functions.js"></script>
 </body>
 
 </html>

@@ -10,10 +10,10 @@
   <link rel='stylesheet prefetch' href='css/normalize.css'>
   <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel='stylesheet prefetch' href='css/style.css'>
+  <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <link rel="stylesheet prefetch" href="css/style.css">
 
     <script src="js/prefixfree.min.js"></script>
-    <script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
 
 </head>
 
@@ -56,23 +56,33 @@
   </dropdown>
 
 	<div class="content">
-		<h2 class="masonry-title">Misc</h2>
-		<div class="masonry js-masonry"  data-masonry-options="{ 'columnWidth': 20 }">
-			<a href="http://www.kaceycoughlin.com/DogeTalk/index.php">
-				<img src="http://www.kaceycoughlin.com/img/misc/dogetalk_thumb.png" title="DogeTalk">
-			</a>
-			<a href="http://www.kaceycoughlin.com/tweepyness/">
-				<img src="http://www.kaceycoughlin.com/img/misc/tweepyness_thumb.png" title="Tweepyness">
-			</a>
-			<a href="http://www.kaceycoughlin.com/img/misc/hipergeo_poster.png">
-				<img src="http://www.kaceycoughlin.com/img/misc/hipergeo_poster_thumb.png" title="HiperGeo Grace Hopper">
-			</a>
-			<a href="http://www.youtube.com/watch?v=Ov8Iwp_W1Mg">
-				<img src="http://www.kaceycoughlin.com/img/archive/boring_life_thumb.jpg" title="Boring Life">
-			</a>
-			<a href="http://www.kaceycoughlin.com/TrooperTime/TrooperTime.html">
-				<img src="http://www.kaceycoughlin.com/img/archive/trooper_time_thumb.jpg" title="Trooper Time">
-			</a>
+		<h2 class="title">Misc</h2>
+		<div class="content-container">
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/DogeTalk/index.php">
+					<img src="http://www.kaceycoughlin.com/img/misc/dogetalk_thumb.png" title="DogeTalk">
+				</a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/tweepyness/">
+					<img src="http://www.kaceycoughlin.com/img/misc/tweepyness_thumb.png" title="Tweepyness">
+				</a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/misc/hipergeo_poster.png">
+					<img src="http://www.kaceycoughlin.com/img/misc/hipergeo_poster_thumb.png" title="HiperGeo Grace Hopper">
+				</a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.youtube.com/watch?v=Ov8Iwp_W1Mg">
+					<img src="http://www.kaceycoughlin.com/img/archive/boring_life_thumb.jpg" title="Boring Life">
+				</a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/TrooperTime/TrooperTime.html">
+					<img src="http://www.kaceycoughlin.com/img/archive/trooper_time_thumb.jpg" title="Trooper Time">
+				</a>
+			</div>
 			<div class="codepen">
 				<p data-height="268" data-theme-id="0" data-slug-hash="pzdFj" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Kaceykaso/pen/pzdFj/'>Taco Tuesday</a> by Kaceykaso (<a href='http://codepen.io/Kaceykaso'>@Kaceykaso</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 				<script async src="http://codepen.io/assets/embed/ei.js"></script>
@@ -108,7 +118,11 @@
 		</div>
 	</div>
 </footer>
-
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/functions.js"></script>
 </body>
 
 </html>

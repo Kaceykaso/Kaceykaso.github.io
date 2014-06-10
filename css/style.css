@@ -114,7 +114,6 @@ footer a:hover {
   width: 40vh;
 }
 .main, .main2 {
-  /*background: url('http://i.imgur.com/QQpWL23.jpg') #070222 top center no-repeat scroll;*/
   background: url('../img/sky.png') #000 top center no-repeat scroll;
   height: 100%;
   margin-bottom: 10vh;
@@ -199,6 +198,7 @@ footer a:hover {
 .content {
 	margin-bottom: 4vh;
 	z-index: 5;
+	margin: 0 5% 0;
 }
 .content h2, .content i {
 	color: #1bbd9d;
@@ -219,6 +219,23 @@ footer a:hover {
 .content div i {
 	font-size: 10vmin;
 	margin: 0 5% 0;
+}
+.content-container {
+	display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row; 
+   flex-direction: row;
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
+}
+.content-container img {
+	width: 200px;
+}
+.fancybox-title a {
+	color: #1bbd9d;
+}
+.fancybox-title a:hover {
+	border-bottom: 1px dotted;
 }
 .about, .sitemap {
 	background: rgba(0, 0, 0, 0.5);
@@ -243,20 +260,7 @@ footer a:hover {
 	margin-top: -100px;
 	width: 40%;
 }
-.masonry {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.masonry > a img, .masonry .codepen {
-  padding: 0.5em;
-  width:  20%;
-  float: left;
-}
-.masonry .codepen {
-	width: 50%;
-}
-.masonry-title {
+.content .title {
 	margin-left: 5%;
 }
 .about img {

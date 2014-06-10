@@ -10,12 +10,9 @@
   <link rel='stylesheet prefetch' href='css/normalize.css'>
   <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="http://www.kaceycoughlin.com/css/magnific.css" rel="stylesheet">
-  <link rel='stylesheet prefetch' href='css/style.css'>
-
+  <link href="css/jquery.fancybox.css" rel="stylesheet">
+  <link rel="stylesheet prefetch" href="css/style.css">
     <script src="js/prefixfree.min.js"></script>
-    <script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
-
 </head>
 
 <body>
@@ -57,13 +54,23 @@
   </dropdown>
 
 	<div class="content">
-		<h2 class="masonry-title">Web</h2>
-		<div class="masonry js-masonry"  data-masonry-options="{ 'columnWidth': 20 }">
-			<a href="http://www.kaceycoughlin.com/tweepyness/"><img src="http://www.kaceycoughlin.com/img/misc/tweepyness_thumb.png" title="Tweepyness"></a>
-			<a href="http://gsa.ucsd.edu/"><img src="http://www.kaceycoughlin.com/img/web/gsa_final_thumb.jpg" title="UCSD GSA"></a>
-			<a href="http://www.kaceycoughlin.com/img/web/sharepoint_tiley.png"><img src="http://www.kaceycoughlin.com/img/web/sharepoint_tiley_thumb.png" title="SharePoint Tiles"></a>
-			<a href="http://www.psemi.com/"><img src="http://www.kaceycoughlin.com/img/web/psemi_final_thumb.jpg" title="Peregrine Semiconductor"></a>
-			<a href="http://www.kaceycoughlin.com/DogeTalk/index.php"><img src="http://www.kaceycoughlin.com/img/misc/dogetalk_thumb.png" title="DogeTalk"></a>
+		<h2 class="title">Web</h2>
+		<div class="content-container">
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/tweepyness/" title="My entry to the <a href='http://la.developerweek.com/hackathon/'>DeveloperWeek LA Hackthon</a> that took place Oct. 18-20, 2013. Fork it on <a href='https://github.com/Kaceykaso/Tweepyness'>Github</a>!<br><br>Tools: PHP, HTML, CSS, Twitter API"><img src="http://www.kaceycoughlin.com/img/misc/tweepyness_thumb.png" title="Tweepyness"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://gsa.ucsd.edu/" title="Redesign and implementation of UC San Diego's <a href='http://gsa.ucsd.edu/'>Graduation Student Association</a> website. Converted previous Drupal site to MySQL database-driven site, built on top of Twitter's <a href='http://getbootstrap.com/'>Bootstrap framework</a> for rapid development and deployment.<br><br>Tools: PHP, MySQL/MySQLi, HTML5, CSS3, Twitter Bootstrap framework, Photoshop, Coda"><img src="http://www.kaceycoughlin.com/img/web/gsa_final_thumb.jpg" title="UCSD GSA"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/web/sharepoint_tiley.png" title="Interactive Windows 8-esque tiled interface, using pure CSS3, to be used in <a href='http://office.microsoft.com/en-us/sharepoint/'>SharePoint 2013</a>, or any website. Fork it on <a href='https://github.com/Kaceykaso/TileyTiles'>Github</a>, or see a <a href='http://www.kaceycoughlin.com/tiles/tiles2.html'>demo here</a>!"><img src="http://www.kaceycoughlin.com/img/web/sharepoint_tiley_thumb.png" title="SharePoint Tiles"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/img/web/psemi_final_2013.jpg" title="Completely redesigned and rebuilt company website for <a href='http://www.psemi.com/'>Peregrine Semiconductor</a> from the ground up; upgraded static <a href='http://en.wikipedia.org/wiki/Microsoft_FrontPage'>FrontPage</a> HTML website to dynamic database-driven website. Redesign included parametric search, custom sorting and filtering on product tables, social networking integration, and responsive design for mobile browsers. Worked with Marketing, Engineering, and Sales departments to understand user needs, limitations, and desired features; maintaining open communication and continually fine-tuning the user experience and interface.<br><br>Tools: PHP, PL/SQL, HTML5, CSS3, Javascript, JQuery, Oracle, Google Site Search, Photoshop, Coda, Terminal, SQL Developer, Apache, Linux Cent OS"><img src="http://www.kaceycoughlin.com/img/web/psemi_final_thumb.jpg" title="Peregrine Semiconductor"></a>
+			</div>
+			<div>
+				<a class="fancybox" data-fancybox-group="gallery" href="http://www.kaceycoughlin.com/DogeTalk/index.php" title="Originally created as a hackathon project for <a href='https://www.hackerleague.org/hackathons/hacktech/hacks/dogetalk'>HackTech 2014</a>. There is both an <a href='http://kaceykaso.github.io/DogeTalk'>email implementation</a>, where the message portion of email is parsed, split, filtered, Doge modifier words added in, and emailed back, and a <a href='http://www.kaceycoughlin.com/DogeTalk/index.php'>web chat implementation</a>, where the user's input will be parsed, split, filtered, Doge modifier words added in, and returned below, along with the user's original input. Chat is recorded to a text file for continuous stream. A reset button deletes text file. Fork it on <a href='https://github.com/Kaceykaso/DogeTalk/'>Github</a>!<br><br>Tools: PHP, HTML, CSS, Sendgrid API"><img src="http://www.kaceycoughlin.com/img/misc/dogetalk_thumb.png" title="DogeTalk"></a>
+			</div>
 		</div>
 	</div><!-- end .content -->
 	
@@ -87,35 +94,11 @@
 		</div>
 	</div>
 </footer>
-
-<script src="http://www.kaceycoughlin.com/js/magnific.js"></script>
-<script type="text/javascript">
-		// Magnific single
-		$(document).ready(function() {
-	
-			$('.masonry').magnificPopup({
-				type: 'image',
-				closeOnContentClick: true,
-				image: {
-					verticalFit: false
-				}
-			});
-			// Group
-			$('.masonry').magnificPopup({
-				delegate: 'a',
-				type: 'image',
-				tLoading: 'Loading image #%curr%...',
-				mainClass: 'mfp-img-mobile',
-				gallery: {
-					enabled: true,
-					navigateByImgClick: true,
-					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-				}
-			});
-		
-		});
-    
-</script>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/functions.js"></script>
 </body>
 
 </html>
